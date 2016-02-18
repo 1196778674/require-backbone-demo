@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>require + backbone</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="well">
+		<h1>require+backbone</h1>
+	</div>
+	<form action="" method="POST" class="form-horizontal container" role="form">
+		<div class="form-group">
+			<div class="input-group">
+				<label class="input-group-addon">姓名</label>
+				<input type="text" class="form-control" name="name" id="name" placeholder="请输入您的姓名">
+			</div>
+		</div>
+		<div class="form-group">
+			<button type="button" class="btn btn-info">添加</button>
+		</div>
+	</form>
+	
+	<fieldset id="person" class="container">
+		<legend>list</legend>
+		<div id="personList"></div>
+	</fieldset>
+
+<script type="text/template" id="J_list">
+	<% _.each(obj, function(value, key){ %>	
+		<li><font><%- value %></font> <span style="display: inline-block;width:20px;height:20px;text-align: center;cursor: pointer;" id="delete">x</span></li>
+	<% }) %>
+</script>
+
+<script src="static/js/lib/require.js" data-main="index"></script>
+
+</body>
+</html>
